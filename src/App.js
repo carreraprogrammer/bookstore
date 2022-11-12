@@ -14,11 +14,11 @@ class App extends React.Component {
     return (
       <Router>
         <div className="container">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Books />} />
-          <Route path="/categories" element={<Categories />} />
-        </Routes>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Books />} />
+            <Route path="/categories" element={<Categories />} />
+          </Routes>
         </div>
       </Router>
     );

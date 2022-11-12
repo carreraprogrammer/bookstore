@@ -7,7 +7,7 @@ const Navbar = () => (
       <p className="logo">Bookstore CMS</p>
       <li className="navLink"><Link to="/">Books</Link></li>
       <li className="navLink"><Link to="/categories">Categories</Link></li>
-      <button type="button" className="userBtn"><FaUserAlt style={{color: "#0290ff"}}/></button>
+      <div className="userBtn"><FaUserAlt style={{ color: '#0290ff' }} /></div>
     </ul>
   </div>
 );
