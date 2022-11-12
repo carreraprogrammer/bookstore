@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Categories from './components/Categories';
+import Categories from './Pages/Categories';
 import Navbar from './components/Navbar';
-import Books from './components/Books';
+import Books from './Pages/Books';
 
 class App extends React.Component {
   constructor(props) {
