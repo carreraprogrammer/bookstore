@@ -16,8 +16,8 @@ class Book extends React.PureComponent {
           <button type="button">Edit</button>
         </div>
         <div className="progressBlock">
-          <progress value="60" max="100"> 32% </progress>
-          <span>32%</span>
+          <progress value="60" max="100"> 60%</progress>
+          <span>60%</span>
         </div>
         <div className="chapterInfo">
           <div>
