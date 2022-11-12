@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import Categories from './components/Calculator';
+import Categories from './components/Categories';
 import Navbar from './components/Navbar';
-import Books from './components/Home';
+import Books from './components/Books';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,11 +13,13 @@ class App extends React.Component {
   render() {
     return (
       <Router>
+        <div className="container">
         <Navbar />
         <Routes>
           <Route path="/" element={<Books />} />
-          <Route path="/calculator" element={<Categories />} />
+          <Route path="/categories" element={<Categories />} />
         </Routes>
+        </div>
       </Router>
     );
   }
