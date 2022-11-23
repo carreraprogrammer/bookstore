@@ -57,11 +57,11 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [BOOKSTORE] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+> The "Bookstore" is a website designed for: Display a list of books, Add a book and Remove a selected book. This project was created using React
 
-**[your_project__name]** is a...
+**[BOOKSTORE]** is a...
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -202,17 +202,11 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Damiel Carrera**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@carreraprogrammer](https://github.com/carreraprogrammer )
+- Twitter: [@carreraprog](https://twitter.com/carreraprog)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/daniel-carrera-85a917244/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
