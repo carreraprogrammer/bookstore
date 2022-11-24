@@ -115,12 +115,12 @@ a {
 
 .formContainer {
   margin-top: 4.438rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .formTitle {
-  width: 10.875rem;
-  height: 1.5rem;
-  margin: 1.813rem 32.75rem 1.188rem 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
@@ -129,6 +129,9 @@ a {
   line-height: normal;
   letter-spacing: -0.18px;
   color: #888;
+  width: 100%;
+  height: 50px;
+  margin-left: 10%;
 }
 
 .bookTitleForm {
