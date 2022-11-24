@@ -1,7 +1,11 @@
 const ADD_BOOK = 'books/ADD_BOOK';
 const REMOVE_BOOK = 'books/REMOVE_BOOK';
 
-const initialState = [];
+const initialState = [
+  { key: 1, title: 'firstBook', author: 'first' },
+  { key: 2, title: 'secondBook', author: 'second' },
+  { key: 3, title: 'thirdBook', author: 'third' },
+];
 
 export const addBook = (book) => ({
   type: ADD_BOOK,
