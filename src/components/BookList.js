@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import Form from './Form';
 
 const BookList = () => {
-  const [booksArray, setBooksArray] = useState([
-    { key: 1, title: 'firstBook', author: 'first' },
-    { key: 2, title: 'secondBook', author: 'second' },
-    { key: 3, title: 'thirdBook', author: 'third' },
-  ]);
+  const [booksArray, setBooksArray] = useState(
+    useSelector((state) => state.books),
+  );
 
   const addBook = (book) => {
     const newBook = book;
