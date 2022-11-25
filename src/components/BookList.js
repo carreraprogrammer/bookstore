@@ -1,29 +1,34 @@
-import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Book from './Book';
 import Form from './Form';
+import { addBook, removeBook } from '../redux/books/books';
 
 const BookList = () => {
-  const [booksArray, setBooksArray] = useState([
-    { key: 1, title: 'firstBook', author: 'first' },
-    { key: 2, title: 'secondBook', author: 'second' },
-    { key: 3, title: 'thirdBook', author: 'third' },
-  ]);
+  const booksArray = useSelector((state) => state.books);
+  const dispatch = useDispatch();
 
-  const addBook = (book) => {
-    const newBook = book;
+  const addNewBook = (book) => {
+    dispatch(addBook(book));
+  };
 
-    setBooksArray([
-      ...booksArray,
-      newBook,
-    ]);
+  const deleteBook = (id) => {
+    dispatch(removeBook(id));
   };
 
   return (
     <div className="bookListContainer">
       <ul className="booksList">
-        {booksArray.map((book) => <Book key={book.key} title={book.title} author={book.author} />)}
+        {booksArray.map((book) => (
+          <Book
+            removeBook={deleteBook}
+            key={book.key}
+            id={book.key}
+            title={book.title}
+            author={book.author}
+          />
+        ))}
       </ul>
-      <Form addNewBook={addBook} />
+      <Form addNewBook={addNewBook} />
     </div>
   );
 };
