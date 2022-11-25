@@ -1,20 +1,14 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Book from './Book';
 import Form from './Form';
+import { addBook } from '../redux/books/books';
 
 const BookList = () => {
-  const [booksArray, setBooksArray] = useState(
-    useSelector((state) => state.books),
-  );
+  const booksArray = useSelector((state) => state.books);
+  const dispatch = useDispatch();
 
-  const addBook = (book) => {
-    const newBook = book;
-
-    setBooksArray([
-      ...booksArray,
-      newBook,
-    ]);
+  const addNewBook = (book) => {
+    dispatch(addBook(book));
   };
 
   return (
@@ -22,7 +16,7 @@ const BookList = () => {
       <ul className="booksList">
         {booksArray.map((book) => <Book key={book.key} title={book.title} author={book.author} />)}
       </ul>
-      <Form addNewBook={addBook} />
+      <Form addNewBook={addNewBook} />
     </div>
   );
 };
