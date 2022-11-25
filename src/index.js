@@ -13,3 +13,10 @@ root.render(
     </Provider>
   </React.StrictMode>,
 );
+
+const API_ID = fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/',
+  {
+    method: 'POST',
+  }).then((response) => response.json());
+
+console.log(API_ID);
