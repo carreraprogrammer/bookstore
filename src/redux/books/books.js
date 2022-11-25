@@ -1,10 +1,12 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const ADD_BOOK = 'books/ADD_BOOK';
 const REMOVE_BOOK = 'books/REMOVE_BOOK';
 
+const uniqueKey = uuidv4();
+
 const initialState = [
-  { key: 1, title: 'It works', author: 'first' },
-  { key: 2, title: 'secondBook', author: 'second' },
-  { key: 3, title: 'thirdBook', author: 'third' },
+  { key: uniqueKey, title: 'It works', author: 'first' },
 ];
 
 export const addBook = (book) => ({
@@ -22,7 +24,7 @@ const booksReducer = (state = initialState, action) => {
     case ADD_BOOK:
       return [...state, action.book];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload);
+      return state.filter((book) => book.key !== action.id);
     default:
       return state;
   }
