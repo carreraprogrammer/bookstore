@@ -1,13 +1,13 @@
-import { v4 as uuidv4 } from 'uuid';
-
+const LOAD_BOOKS = 'books/LOAD_BOOKS';
 const ADD_BOOK = 'books/ADD_BOOK';
 const REMOVE_BOOK = 'books/REMOVE_BOOK';
 
-const uniqueKey = uuidv4();
+const initialState = [];
 
-const initialState = [
-  { key: uniqueKey, title: 'It works', author: 'first' },
-];
+export const loadBooks = (books) => ({
+  type: LOAD_BOOKS,
+  books,
+});
 
 export const addBook = (book) => ({
   type: ADD_BOOK,
@@ -24,7 +24,17 @@ const booksReducer = (state = initialState, action) => {
     case ADD_BOOK:
       return [...state, action.book];
     case REMOVE_BOOK:
-      return state.filter((book) => book.key !== action.id);
+      return state.filter((book) => book.item_id !== action.id);
+    case LOAD_BOOKS: {
+      const bookList = [];
+      Object.entries(action.books).forEach(([key, value]) => bookList.push({
+        item_id: key,
+        title: value[0].title,
+        author: value[0].author,
+        category: value[0].category,
+      }));
+      return [...bookList];
+    }
     default:
       return state;
   }

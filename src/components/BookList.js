@@ -1,18 +1,14 @@
 import { useSelector, useDispatch } from 'react-redux';
 import Book from './Book';
 import Form from './Form';
-import { addBook, removeBook } from '../redux/books/books';
+import removeBookAsync from '../redux/Thunks/remove_books';
 
 const BookList = () => {
   const booksArray = useSelector((state) => state.books);
   const dispatch = useDispatch();
 
-  const addNewBook = (book) => {
-    dispatch(addBook(book));
-  };
-
   const deleteBook = (id) => {
-    dispatch(removeBook(id));
+    dispatch(removeBookAsync(id));
   };
 
   return (
@@ -21,14 +17,14 @@ const BookList = () => {
         {booksArray.map((book) => (
           <Book
             removeBook={deleteBook}
-            key={book.key}
-            id={book.key}
+            key={book.item_id}
+            id={book.item_id}
             title={book.title}
             author={book.author}
           />
         ))}
       </ul>
-      <Form addNewBook={addNewBook} />
+      <Form />
     </div>
   );
 };
