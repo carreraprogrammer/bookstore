@@ -300,3 +300,37 @@ a {
   cursor: pointer;
   border: none;
 }
+
+/* CATEGORÍES STYLES */
+
+.categoriesContainer {
+  width: 87.5rem;
+  height: 70vh;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 var(--black-5);
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoryText {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.375rem;
+  margin-bottom: 24px;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.categoryBtn {
+  width: 11.5rem;
+  height: 2.813rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
