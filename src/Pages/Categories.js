@@ -11,9 +11,9 @@ const Categories = () => {
   };
 
   return (
-    <div className="category-container">
-      <h2 className="category-text">{categories}</h2>
-      <button type="button" className="category-btn" onClick={() => updateStatus()}>Check Status</button>
+    <div className="categoriesContainer">
+      <h2 className="categoryText">{categories}</h2>
+      <button type="button" className="categoryBtn" onClick={() => updateStatus()}>Check Status</button>
     </div>
   );
 };

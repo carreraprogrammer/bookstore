@@ -15,25 +15,33 @@ const Book = (props) => {
       <div className="bookInfo">
         <h2 className="bookTitle">{title}</h2>
         <span className="bookAuthor">{author}</span>
-      </div>
-      <div className="bookActions">
-        <button type="button">Comments</button>
-        <button type="button" onClick={deleteBook}>Remove</button>
-        <button type="button">Edit</button>
+        <div className="bookActions">
+          <button type="button" className="commentsBtn actionBtn">Comments</button>
+          <button type="button" className="removeBtn actionBtn" onClick={deleteBook}>Remove</button>
+          <button type="button" className="editBtn actionBtn">Edit</button>
+        </div>
       </div>
       <div className="progressBlock">
-        <progress value="60" max="100"> 60%</progress>
-        <span>60%</span>
+        <div className="circularProgressContainer">
+          <div className="circularProgress" />
+        </div>
+        <div className="statusSection">
+          <span className="percentageCompleted">
+            {`${Math.round(Math.random() * 99) + 1}%`}
+            {' '}
+          </span>
+          <p className="statusBook">completed</p>
+        </div>
       </div>
       <div className="chapterInfo">
-        <div>
-          chapter info
+        <div className="chapterTitle">
+          CURRENT CHAPTER
         </div>
-        <div>
-          introduction
+        <div className="currentChapter">
+          Introduction
         </div>
-        <button type="button">
-          Update progress
+        <button className="updateBtn" type="button">
+          UPDATE PROGRESS
         </button>
       </div>
     </div>
