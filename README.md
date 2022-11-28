@@ -108,7 +108,7 @@ After you're finished please remove all the comments and instructions!
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://carrera-bookstore.netlify.app)
+- [Live Demo Link](https://mellow-piroshki-7edbbc.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
